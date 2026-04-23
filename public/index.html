@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오답노트 AI 웹앱</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+        <h1>오답노트 AI 웹앱</h1>
+
+        <div id="authCard" class="card auth-card">
+            <div class="auth-tabs">
+                <button id="showLoginTab" class="tab-btn active" type="button">로그인</button>
+                <button id="showRegisterTab" class="tab-btn" type="button">회원가입</button>
+            </div>
+
+            <div id="loginBox">
+                <h2>로그인</h2>
+                <input id="loginEmail" type="email" placeholder="이메일" />
+                <input id="loginPassword" type="password" placeholder="비밀번호" />
+                <button id="loginBtn" class="primary-btn" type="button">로그인</button>
+            </div>
+
+            <div id="registerBox" hidden>
+                <h2>회원가입</h2>
+                <input id="registerName" type="text" placeholder="이름" />
+                <input id="registerEmail" type="email" placeholder="이메일" />
+                <input id="registerPassword" type="password" placeholder="비밀번호 (4자 이상)" />
+                <button id="registerBtn" class="primary-btn" type="button">회원가입</button>
+            </div>
+
+            <p id="authMessage" class="check-text"></p>
+        </div>
+
+        <div id="appShell" hidden>
+            <div class="card" id="cardPricing">
+                <div class="top-bar">
+                    <div>
+                        <h2 id="welcomeText">환영합니다</h2>
+                        <p id="usageText" class="usage-text"></p>
+                        <p id="slotText" class="check-text"></p>
+                    </div>
+                    <div class="button-row">
+                        <button id="logoutBtn" class="secondary-btn" type="button">로그아웃</button>
+                    </div>
+                </div>
+
+                <h2>요금제 안내</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-title">무료</div>
+                        <div class="pricing-line">AI 하루 2회</div>
+                        <div class="pricing-line">저장 50개</div>
+                        <div class="pricing-line">유사문제 1개</div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-title">5900원</div>
+                        <div class="pricing-line">AI 하루 20회</div>
+                        <div class="pricing-line">저장 300개</div>
+                        <div class="pricing-line">유사문제 2개</div>
+                        <div class="pricing-line">복습 추천 / 통계</div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-title">8900원</div>
+                        <div class="pricing-line">AI 하루 40회</div>
+                        <div class="pricing-line">저장 무제한</div>
+                        <div class="pricing-line">유사문제 3개</div>
+                        <div class="pricing-line">응용문제 / 약한 과목</div>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button id="planFree" class="free-btn" type="button">무료</button>
+                    <button id="plan5900" class="pro-btn" type="button">5900원</button>
+                    <button id="plan8900" class="max-btn" type="button">8900원</button>
+                    <button id="resetUsageBtn" class="secondary-btn" type="button">테스트 리셋</button>
+                </div>
+            </div>
+
+            <div class="card" id="cardInput">
+                <h2>문제 입력</h2>
+
+                <p id="similarModeText" class="usage-text" hidden>유사문제 풀이 모드입니다.</p>
+                <p id="advancedModeText" class="usage-text advanced-mode" hidden>응용문제 풀이 모드입니다.</p>
+
+                <label for="subject">과목</label>
+                <select id="subject"></select>
+
+                <div class="subject-manager">
+                    <div class="button-row">
+                        <input id="newSubjectInput" type="text" placeholder="선택 과목 추가 (예: 한국사, 일본어)" />
+                        <button id="addSubjectBtn" class="secondary-btn" type="button">과목 추가</button>
+                    </div>
+                    <div id="customSubjectList" class="subject-chip-list"></div>
+                </div>
+
+                <label for="problem">문제</label>
+                <textarea id="problem" placeholder="문제를 입력하세요"></textarea>
+
+                <label for="userAnswer">내 답</label>
+                <input id="userAnswer" type="text" placeholder="내 답을 입력하세요" />
+
+                <label for="correctAnswer">정답</label>
+                <input id="correctAnswer" type="text" placeholder="정답을 입력하세요" />
+
+                <div class="button-row">
+                    <button id="checkBtn" class="primary-btn" type="button">정답 확인</button>
+                    <button id="analyzeBtn" class="accent-btn" type="button">AI 분석하기</button>
+                    <button id="clearInputsBtn" class="secondary-btn" type="button">입력 초기화</button>
+                    <button id="exitModeBtn" class="secondary-btn" type="button" hidden>모드 종료</button>
+                    <span id="loadingSpinner" class="spinner"></span>
+                </div>
+
+                <p id="messageText" class="check-text"></p>
+            </div>
+
+            <div class="card" id="cardAnalysis">
+                <h2>AI 분석 결과</h2>
+
+                <p class="section-label">1. 틀린 이유</p>
+                <p id="resultReason" class="result-box">아직 분석 결과가 없습니다.</p>
+
+                <p class="section-label">2. 부족한 개념</p>
+                <p id="resultConcept" class="result-box">아직 분석 결과가 없습니다.</p>
+
+                <p class="section-label">3. 해결 방법</p>
+                <p id="resultSolution" class="result-box">아직 분석 결과가 없습니다.</p>
+
+                <p id="analysisUpsellText" class="lock-mini-text"></p>
+            </div>
+
+            <div class="card" id="cardSimilar">
+                <h2>유사문제</h2>
+                <p class="check-text">요금제에 따라 개수가 달라집니다.</p>
+                <div id="similarProblemsBox" class="problem-list-box"></div>
+                <p id="similarUpsellText" class="lock-mini-text"></p>
+            </div>
+
+            <div class="card" id="cardAdvanced">
+                <h2>응용문제</h2>
+                <p class="check-text">8900원 전용 / 문제당 1회 / 하루 5회</p>
+                <div class="button-row">
+                    <button id="generateAdvancedBtn" class="secondary-btn" type="button">응용문제 생성</button>
+                </div>
+                <p id="advancedProblemBox" class="result-box">아직 응용문제가 없습니다.</p>
+                <div class="button-row">
+                    <button id="useAdvancedProblemBtn" class="secondary-btn" type="button">응용문제 풀기</button>
+                </div>
+            </div>
+
+            <div class="card" id="cardRecommend">
+                <h2>오늘 복습 추천</h2>
+                <div id="recommendedReviewBox" class="problem-list-box"></div>
+            </div>
+
+            <div class="card" id="cardTopWrong">
+                <h2>가장 많이 틀린 문제 TOP 3</h2>
+                <div id="topWrongBox" class="problem-list-box"></div>
+            </div>
+
+            <div class="card" id="cardSummary">
+                <h2>성취도 통계</h2>
+                <div class="summary-stats-grid">
+                    <div class="summary-stat-card">
+                        <div class="summary-stat-title">총 오답</div>
+                        <div id="summaryWrongCount" class="summary-stat-value">0</div>
+                    </div>
+                    <div class="summary-stat-card">
+                        <div class="summary-stat-title">총 복습완료</div>
+                        <div id="summarySolvedCount" class="summary-stat-value">0</div>
+                    </div>
+                    <div class="summary-stat-card">
+                        <div class="summary-stat-title">전체 해결률</div>
+                        <div id="summaryAccuracy" class="summary-stat-value">0%</div>
+                    </div>
+                    <div class="summary-stat-card">
+                        <div class="summary-stat-title">유사/응용 성공률</div>
+                        <div id="summaryExtraAccuracy" class="summary-stat-value">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="cardSubjectStats">
+                <h2>과목별 통계</h2>
+                <div id="weaknessBadgeBox" class="weakness-box" hidden></div>
+                <div id="subjectStats" class="stats-grid"></div>
+            </div>
+
+            <div class="card" id="cardWrong">
+                <div class="section-header">
+                    <h2>오답 리스트</h2>
+                    <button id="toggleWrongBtn" class="secondary-btn" type="button">접기</button>
+                </div>
+
+                <div id="wrongSectionBody">
+                    <div class="toolbar">
+                        <div class="toolbar-item">
+                            <label for="filterSubject">과목 필터</label>
+                            <select id="filterSubject"></select>
+                        </div>
+
+                        <div class="toolbar-item">
+                            <label for="searchInput">검색</label>
+                            <input id="searchInput" type="text" placeholder="문제, 과목, 개념, 해결 방법 검색" />
+                        </div>
+
+                        <div class="toolbar-item">
+                            <label for="sortType">정렬</label>
+                            <select id="sortType">
+                                <option value="latest">최신순</option>
+                                <option value="oldest">오래된순</option>
+                                <option value="subject">과목순</option>
+                                <option value="repeat">반복오답순</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="count-box">
+                        <p id="wrongCount">오답 개수: 0</p>
+                        <p id="solvedCount">복습완료 개수: 0</p>
+                        <p id="filterCount">현재 보기: 전체 / 0개</p>
+                    </div>
+
+                    <div class="button-row">
+                        <button id="clearAllBtn" class="danger-btn" type="button">오답 전체 삭제</button>
+                    </div>
+
+                    <ul id="wrongList"></ul>
+                </div>
+            </div>
+
+            <div class="card" id="cardSolved">
+                <div class="section-header">
+                    <h2>복습완료 리스트</h2>
+                    <button id="toggleSolvedBtn" class="secondary-btn" type="button">접기</button>
+                </div>
+
+                <div id="solvedSectionBody">
+                    <ul id="solvedList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

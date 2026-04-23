@@ -1,0 +1,260 @@
+{
+  "users": [
+    {
+      "id": "8cbb1bca-6576-4c61-a115-7fb212f7dee7",
+      "name": "일본계",
+      "email": "ilbong351@gmail.com",
+      "passwordHash": "$2a$10$zMaGYbZNqpTYNWLDcgm.C.c4Ww0o9Lx1LHnCO6mW/FuoBAretjJOy",
+      "plan": "free",
+      "createdAt": 1776792499603,
+      "usageAi": {
+        "date": "2026-04-23",
+        "count": 0
+      },
+      "usageAdvanced": {
+        "date": "2026-04-23",
+        "count": 0,
+        "usedKeys": []
+      },
+      "notes": [
+        {
+          "id": "cfb4fb35-db44-4336-bd60-3c95d532829c",
+          "subject": "수학",
+          "problem": "2+2",
+          "userAnswer": "3",
+          "correctAnswer": "4",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776896342269,
+          "updatedAt": 1776896342269
+        }
+      ],
+      "solvedNotes": [],
+      "analysisCache": {}
+    },
+    {
+      "id": "ca8c4016-b854-4c99-a493-b870a69199de",
+      "name": "일본계2",
+      "email": "ilbong352@gmail.com",
+      "passwordHash": "$2a$10$0QwFQFjwiQPFIqgAvicqleaQwv6EhdVCZXTNHIsfLeQfKyEr6JOcC",
+      "plan": "premium8900",
+      "createdAt": 1776792508129,
+      "usageAi": {
+        "date": "2026-04-21",
+        "count": 3
+      },
+      "usageAdvanced": {
+        "date": "2026-04-21",
+        "count": 3,
+        "usedKeys": [
+          "수학::22+22",
+          "수학::26+26\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+          "수학::30+30\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오."
+        ]
+      },
+      "notes": [
+        {
+          "id": "7979269f-fc90-4b93-874a-1f0f21c73a2d",
+          "subject": "영어",
+          "problem": "2+3",
+          "userAnswer": "4",
+          "correctAnswer": "5",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792560287,
+          "updatedAt": 1776792560287
+        },
+        {
+          "id": "da5427a7-f297-478f-97e2-21f1df0f7add",
+          "subject": "수학",
+          "problem": "2+3",
+          "userAnswer": "4",
+          "correctAnswer": "5",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792621469,
+          "updatedAt": 1776792621469
+        },
+        {
+          "id": "76bafddb-cc6f-4a7d-984c-fbf41976da81",
+          "subject": "수학",
+          "problem": "6+6",
+          "userAnswer": "11",
+          "correctAnswer": "12",
+          "reason": "정답과 다릅니다. 계산 실수나 개념 혼동 가능성이 있습니다.",
+          "concept": "핵심 개념을 짧게 다시 확인해야 합니다.",
+          "solution": "개념을 다시 보고 같은 유형 1문제를 더 풀어보세요.",
+          "similarProblems": [
+            "6+6"
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "similar",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792704019,
+          "updatedAt": 1776792704019
+        },
+        {
+          "id": "681fd42e-02a5-4fa6-9713-ecf523de7ea8",
+          "subject": "수학",
+          "problem": "22+22",
+          "userAnswer": "43",
+          "correctAnswer": "44",
+          "reason": "정답과 다릅니다. 개념 부족, 조건 해석 실수, 계산 실수 중 하나 이상이 보입니다.",
+          "concept": "핵심 개념을 먼저 정리한 뒤 조건을 단계별로 연결하는 연습이 필요합니다.",
+          "solution": "왜 틀렸는지 한 줄로 적고 유사문제 후 응용문제까지 이어서 풀어보세요.",
+          "similarProblems": [
+            "23+23",
+            "24+24",
+            "25+25"
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "similar",
+          "repeatWrongCount": 2,
+          "createdAt": 1776792784326,
+          "updatedAt": 1776792785453
+        },
+        {
+          "id": "5fa9482a-19ad-46bf-84fa-ae2fd5286187",
+          "subject": "수학",
+          "problem": "2+4",
+          "userAnswer": "6",
+          "correctAnswer": "6",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792807760,
+          "updatedAt": 1776792807760,
+          "solvedAt": 1776792672431
+        },
+        {
+          "id": "011fd19d-260d-49eb-ba81-f4350a87fe44",
+          "subject": "수학",
+          "problem": "34+34\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+          "userAnswer": "68",
+          "correctAnswer": "68",
+          "reason": "정답과 다릅니다. 개념 부족, 조건 해석 실수, 계산 실수 중 하나 이상이 보입니다.",
+          "concept": "핵심 개념을 먼저 정리한 뒤 조건을 단계별로 연결하는 연습이 필요합니다.",
+          "solution": "왜 틀렸는지 한 줄로 적고 유사문제 후 응용문제까지 이어서 풀어보세요.",
+          "similarProblems": [
+            "35+35\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+            "36+36\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+            "37+37\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오."
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "advanced",
+          "repeatWrongCount": 2,
+          "createdAt": 1776792918990,
+          "updatedAt": 1776792918990,
+          "solvedAt": 1776792907360
+        }
+      ],
+      "solvedNotes": [
+        {
+          "id": "132241bc-14d2-4ecc-a0bd-98bdbf8ee1b5",
+          "subject": "영어",
+          "problem": "2+2",
+          "userAnswer": "4",
+          "correctAnswer": "4",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792549265,
+          "updatedAt": 1776792549265,
+          "solvedAt": 1776792821122
+        },
+        {
+          "id": "5715479a-d54b-417d-a182-58740cbac497",
+          "subject": "국어",
+          "problem": "2+2",
+          "userAnswer": "4",
+          "correctAnswer": "4",
+          "reason": "정답과 다른 답입니다.",
+          "concept": "핵심 개념을 다시 확인해야 합니다.",
+          "solution": "풀이 순서를 짧게 적고 다시 풀어보세요.",
+          "similarProblems": [],
+          "advancedProblem": "",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792533205,
+          "updatedAt": 1776792533205,
+          "solvedAt": 1776792836405
+        },
+        {
+          "id": "7621989c-ae46-415e-af34-128f667b67d8",
+          "subject": "수학",
+          "problem": "5+5",
+          "userAnswer": "10",
+          "correctAnswer": "10",
+          "reason": "정답과 다릅니다. 계산 실수나 개념 혼동 가능성이 있습니다.",
+          "concept": "핵심 개념을 짧게 다시 확인해야 합니다.",
+          "solution": "개념을 다시 보고 같은 유형 1문제를 더 풀어보세요.",
+          "similarProblems": [
+            "6+6"
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다.",
+          "sourceType": "normal",
+          "repeatWrongCount": 1,
+          "createdAt": 1776792690866,
+          "updatedAt": 1776792690866,
+          "solvedAt": 1776792850200
+        }
+      ],
+      "analysisCache": {
+        "free::수학::5+5::9::10": {
+          "reason": "정답과 다릅니다. 계산 실수나 개념 혼동 가능성이 있습니다.",
+          "concept": "핵심 개념을 짧게 다시 확인해야 합니다.",
+          "solution": "개념을 다시 보고 같은 유형 1문제를 더 풀어보세요.",
+          "similarProblems": [
+            "6+6"
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다."
+        },
+        "premium8900::수학::22+22::43::44": {
+          "reason": "정답과 다릅니다. 개념 부족, 조건 해석 실수, 계산 실수 중 하나 이상이 보입니다.",
+          "concept": "핵심 개념을 먼저 정리한 뒤 조건을 단계별로 연결하는 연습이 필요합니다.",
+          "solution": "왜 틀렸는지 한 줄로 적고 유사문제 후 응용문제까지 이어서 풀어보세요.",
+          "similarProblems": [
+            "23+23",
+            "24+24",
+            "25+25"
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다."
+        },
+        "premium8900::수학::34+34\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.::67::68": {
+          "reason": "정답과 다릅니다. 개념 부족, 조건 해석 실수, 계산 실수 중 하나 이상이 보입니다.",
+          "concept": "핵심 개념을 먼저 정리한 뒤 조건을 단계별로 연결하는 연습이 필요합니다.",
+          "solution": "왜 틀렸는지 한 줄로 적고 유사문제 후 응용문제까지 이어서 풀어보세요.",
+          "similarProblems": [
+            "35+35\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+            "36+36\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오.",
+            "37+37\n추가 조건: 답을 구한 뒤 이유를 한 줄로 쓰시오."
+          ],
+          "advancedProblem": "아직 응용문제가 없습니다."
+        }
+      }
+    }
+  ]
+}
